@@ -58,7 +58,15 @@ Examples:
     hasNoDuplicates([1,2,3]) // true
 */
 
-function hasNoDuplicates(arr) {}
+function hasNoDuplicates(arr) {
+    let uniques = [];
+    return arr.every(function(num) {
+        if (uniques.includes(num))
+            return false;
+        uniques.push(num);
+        return true;
+    })
+}
 
 /*
 Write a function called hasCertainKey which accepts an array of objects 
