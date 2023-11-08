@@ -41,7 +41,11 @@ Examples:
     hasOnlyOddNumbers([1,2,3,5,7]) // false
 */
 
-function hasOnlyOddNumbers(arr) {}
+function hasOnlyOddNumbers(arr) {
+    return arr.every(function(num){
+        return num % 2 === 1;
+    });
+}
 
 /*
 Write a function called hasNoDuplicates which accepts an array and 
