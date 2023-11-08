@@ -24,7 +24,12 @@ Examples:
     hasAZero(1212121) // false
 */
 
-function hasAZero(num) {}
+function hasAZero(num) {
+    let numArr = num.toString().split('');
+    return numArr.some(function(digit){
+        return digit === '0';
+    })
+}
 
 /*
 Write a function called hasOnlyOddNumbers which accepts an array and 
